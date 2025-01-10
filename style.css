@@ -1,0 +1,144 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  position: relative;
+    top: 0;
+    left: 0;
+ 
+}
+
+.logo{
+  width: 200px;
+}
+
+.logo img{
+  width: 150px;
+}
+
+.icon{
+  display: none;
+}
+
+
+
+.nav-links{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links li{
+  list-style: none;
+  
+}
+
+.nav-links li a{
+  text-decoration: none;
+  color: #f3ccd7;
+}
+#xmark{
+  display: none;
+}
+
+
+/*----------navlinks li side arrow and toggle rotate ----*/
+.arrow{
+  transition: 0.3s;
+}
+.arrow.rotate{
+  transform:rotate(180deg);
+ 
+}
+
+/*----------drop-down submenu and toggle dropdown-menu*/
+.sub-menu{
+  display: none;
+  position: absolute;
+}
+.sub-menu.down-menu{
+  position: relative;
+}
+.sub-menu.dropdown-menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  transition: 0.4s;
+}
+
+
+@media screen and (max-width: 950px){
+
+  .contact{
+    display: none;
+  }
+  .navbar{
+    padding: 10px 25px;
+    background: #70555c;
+  }
+  .nav-links li a{
+   
+  }
+
+  .logo img{
+    width: 40px;
+  }
+  .icon{
+    display: flex;
+    cursor: pointer;
+  }
+  .icon #bar{
+    font-size: 24px;
+  }
+  .icon #xmark{
+    font-size: 24px;
+  }
+  .nav-links{
+    display: none;
+  }
+
+  /*----------navlinks toggle show for hamburger----*/
+  .show{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 50px;
+   
+    left: 0;
+    width: 100%;
+   
+    position: absolute;
+    text-align: center;
+    padding: 0;
+    gap: 22px;
+    background: #70555c;
+  }
+
+  /*----------navlinks li services submenu and toggle dropdown-menu----*/
+  .sub-menu.dropdown-menu{
+    display: block;
+    position: relative;
+    box-shadow: 10px 10px 5px #2b444c;
+    top: 12px;
+    left: 56px;
+    
+  }
+  .sub-menu.dropdown-menu li{
+    padding: 8px 8px;
+  }
+  .sub-menu{
+    ;
+  }
+}
